@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: flask-backend-app
+  namespace: argocd   # 👈 MUST be argocd
+spec:
+  destination:
+    namespace: default   # 👈 Your backend app will run in default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: https://github.com/chizzygucci/flask-react.git
+    targetRevision: HEAD
+    path: agroyaml        # 👈 Path in the repo where your YAML files are
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
