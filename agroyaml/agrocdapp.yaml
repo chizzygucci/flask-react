@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/chizzygucci/flask-react.git
-    targetRevision: STAGING
+    targetRevision: devops-feature
     path: agroyaml        # 👈 Path in the repo where your YAML files are
   syncPolicy:
     automated:
