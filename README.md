@@ -119,3 +119,63 @@ Power of GitOps: ArgoCD automates deployments and helps maintain a declarative a
 Best Practices: Proper environment isolation and version control hygiene improve collaboration and reduce errors.
 
 
+
+
+
+
+
+
+## Project Overview
+
+This project demonstrates deploying flask app to aws EKS 
+
+---
+ AWS Kubernetes Deployment Portfolio Projects
+
+
+---
+
+##  Flask App Deployment to AWS EKS
+
+### Containerization & Deployment
+ 
+- Dockerized both frontend and backend services with individual Dockerfiles.
+- Built and pushed Docker images to Docker Hub via bash
+
+Flask app — containerized with Docker  
+Deployed to AWS EKS (Elastic Kubernetes Service)   Cluster created using eksctl   App deployed using kubectl
+ Exposed via AWS Load Balancer
+
+---
+
+#  Why I built these projects
+
+To demonstrate real-world Kubernetes and AWS EKS skills  
+    
+
+---
+
+#  Technologies Used
+
+- AWS EKS  
+- Kubernetes (Pods, Services, )    
+- Docker  
+- eksctl  
+- kubectl    
+- Flask  
+- React  
+
+---
+
+# Learnings and Challenges
+--Automating EKS cluster creation
+--After deploying to AWS EKS
+--Got the external IP using (kubectl get svc my-app-service)
+--Ran the loadbalancer link on a browser, it shows not reacheable
+--went to the Nano app.py and edited the local host  to if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=80) I edit it because in cloud you can’t use localhost  cloud traffic comes from outside!
+ host='0.0.0.0' makes it reachable from LoadBalancer
+After doing that it worked, the loadbalance link could then show the flask app content
+  
+
+
